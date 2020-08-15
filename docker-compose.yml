@@ -1,0 +1,8 @@
+version: "3.8"
+
+services:
+  icecast_exporter:
+    image: icecast_exporter
+    ports:
+      - "9146:9146"
+    network_mode: host
