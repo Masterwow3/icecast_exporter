@@ -2,9 +2,7 @@ var express = require('express');
 var request = require("request");
 var app = express();
 
-var myArgs = process.argv.slice(2);
-
-let icecastStatusJsonUrl = myArgs[0];
+let icecastStatusJsonUrl = process.env.ICECAST_URL;
 if (!icecastStatusJsonUrl) {
     icecastStatusJsonUrl = "http://localhost:9146/status-json.xsl";
 }
