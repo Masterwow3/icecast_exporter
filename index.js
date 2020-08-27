@@ -64,6 +64,9 @@ ${streamPrefix}_up 1`;
             }
             res.send(metrics);
         } else {
+            console.error(error);
+            console.error(response);
+            console.error(body);
             if(response){
                 res.status(response.statusCode).send(error);
             }else{
