@@ -52,7 +52,7 @@ icecast_server_up 1`;
                 data.icestats.source.forEach(sourceItem => {
                     const streamPrefix = `icecast_server_stream_${data.icestats.source.indexOf(sourceItem)}`;
                     metrics +=
-                        `# TYPE ${streamPrefix}_listeners gauge
+                        `\n# TYPE ${streamPrefix}_listeners gauge
 ${streamPrefix}_listeners ${sourceItem.listeners}
 # HELP ${streamPrefix}_info Stream information
 # TYPE ${streamPrefix}_info gauge
