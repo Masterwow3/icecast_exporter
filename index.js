@@ -54,6 +54,9 @@ icecast_server_up 1`;
                     metrics +=
                         `\n# TYPE ${streamPrefix}_listeners gauge
 ${streamPrefix}_listeners ${sourceItem.listeners}
+# HELP ${streamPrefix}_info Stream information
+# TYPE ${streamPrefix}_info gauge
+${streamPrefix}_info{listenurl="${sourceItem.listenurl}", server_name="${sourceItem.server_name}", title="${sourceItem.title}", ice_bitrate="${sourceItem["ice-bitrate"]}", ice_channels="${sourceItem["ice-channels"]}", ice_samplerate="${sourceItem["ice-samplerate"]}"} 1
 # HELP ${streamPrefix}_up Was the last scrape of Icecast successful.
 # TYPE ${streamPrefix}_up gauge
 ${streamPrefix}_up 1`;
