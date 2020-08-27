@@ -7,4 +7,4 @@ services:
       - "9146:9146"
     network_mode: host
     environment:
-        - ICECAST_URL="http://localhost:8000/status-json.xsl"
+        - ICECAST_URL=http://localhost:8000/status-json.xsl
