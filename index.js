@@ -64,7 +64,11 @@ ${streamPrefix}_up 1`;
             }
             res.send(metrics);
         } else {
-            res.status(response.statusCode).send(error);
+            if(response){
+                res.status(response.statusCode).send(error);
+            }else{
+                res.status(500).send(error);
+            }
         }
     });
 })
